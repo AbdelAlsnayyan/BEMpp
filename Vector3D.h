@@ -16,7 +16,7 @@ class Vector3D {
   Vector3D() { x = y = z = 0; };
 
 // returns x, y, z
-  inline double& operator[] ( const int& index ) {
+  inline double& operator[] ( const std::size_t& index ) {
     return ( &x )[ index ];
   }
 

@@ -1,7 +1,11 @@
+#ifndef MESH_H
+#define MESH_H
+
 #include <vector>
 #include <map>
 #include <iterator>
 #include "HalfEdge.h"
+
 
 namespace CG{
 
@@ -16,6 +20,7 @@ class Mesh{
 
   Face *create_face(Vertex *v[],std::size_t id);
   Face *id_face(std::size_t id);
+  const Face *face(std::size_t id) const {return m_faces[id];};
 
   Edge *create_edge(Vertex *v1, Vertex *v2);
 
@@ -43,3 +48,5 @@ class Mesh{
 };
 
 }
+
+#endif

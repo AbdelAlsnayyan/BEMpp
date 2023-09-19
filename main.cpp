@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Mesh.h"
 #include "MassMatrix.h"
+#include "RHS.h"
+#define int_order1 5
 
 int main(){
 
@@ -20,6 +22,10 @@ oldMesh->create_2ring_neighborhood();
 //BEM::GaussLegendreRule<9> Int_Order;
 //std::cout << Int_Order.xi_int[1] << std::endl;
 BEM::MassMatrix MM(*oldMesh);
+std::size_t int_order = 3;
+MM.Assemble(*oldMesh);
+std::cout << MM(1,1) << std::endl;
+
 
 
 return 0;

@@ -1,3 +1,5 @@
+#ifndef Integration_H
+#define Integration_H
 
 namespace BEM{
 
@@ -223,6 +225,6 @@ struct GaussLegendreRule<10>{
 };
 
 
-
-
 }
+
+#endif

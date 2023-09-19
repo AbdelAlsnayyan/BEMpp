@@ -17,6 +17,7 @@ class Face{
    Vector3D &norm() { return m_norm; };
    Vector3D position(double u, double v);
    double &area(){return m_area;};
+   const double get_area() const {return m_area;};
    double compute_area();
    void normal();
    void printVertexPositions();
